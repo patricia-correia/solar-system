@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 
 class PlanetCard extends React.Component {
   render() {
-    const { planetName, planetImage } = this.props;
-
+    const { planetImage, planetName } = this.props;
     return (
       <div data-testid="planet-card">
         <img
-          data-testid="planet-name"
           src={ planetImage }
-          alt={ `Planets ${planetName}` }
+          alt={ `Planeta ${planetName}` }
         />
+        <p data-testid="planet-name">{planetName}</p>
       </div>
     );
   }
